@@ -33,7 +33,7 @@ Clone the repo to you local machine
 ## 🤝 Contributing
 All contributions, issues and feature requests are welcome!
 
-1. Fork it (https://github.com/Mesi21/WheatherApp)
+1. Fork it (https://github.com/Mesi21/Etch-A-Sketch)
 2. Create your working branch (git checkout -b [choose-a-name])
 3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
 4. Push to the branch (git push origin [chosen-name])
