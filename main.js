@@ -1,8 +1,8 @@
 const board = document.getElementById("board");
-const newBoard = document.getElementById("reset_btn");
+const resetBoard = document.getElementById("reset_btn");
 const changeBoard = document.getElementById("grid_size");
 
-const basicGrid = (cols, rows) => {
+const createGrid = (cols, rows) => {
     board.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
     board.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
 
@@ -31,12 +31,14 @@ const changeColor = (ev) => {
     return ev
 }
 
-newBoard.addEventListener("click", (ev) => {
-    gridElements.forEach((item) => {
-        item.classList.remove("current");
+const reset = () => {
+    resetBoard.addEventListener("click", (ev) => {
+        gridElements.forEach((item) => {
+            item.classList.remove("current");
+        });
     });
-    return ev
-});
+}
+
 
 changeBoard.addEventListener("click", (ev) => {
     gridElements.forEach((item) => {
@@ -44,8 +46,14 @@ changeBoard.addEventListener("click", (ev) => {
     });
     cols = prompt("How many cols?");
     rows = prompt("How many rows?");
-    basicGrid(cols, rows);
+    createGrid(cols, rows);
 })
 
+const starter = () => {
+    createGrid();
+    reset();
+}
 
-basicGrid();
+starter();
+
+
