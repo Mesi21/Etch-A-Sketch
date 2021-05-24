@@ -16,9 +16,9 @@ const createGrid = (cols, rows) => {
   
   let gridElements = document.querySelectorAll('.grid-item');
   gridElements.forEach((item) => {
-      item.addEventListener('mouseover', (ev) => {
-        changeColor(ev);
-      });
+    item.addEventListener('mouseover', (ev) => {
+      changeColor(ev);
+    });
   });
 };
 
@@ -31,17 +31,18 @@ const changeColor = (ev) => {
 };
 
 const reset = () => {
+  let gridElements = document.querySelectorAll('.grid-item');
   resetBoard.addEventListener('click', () => {
     gridElements.forEach((item) => {
-        item.style = null;
+      item.style = null;
     });
   });
 };
 
 
 changeBoard.addEventListener('click', () => {
-  cols = prompt('How many cols?');
-  rows = prompt('How many rows?');
+  const cols = prompt('How many cols?');
+  const rows = prompt('How many rows?');
   createGrid(cols, rows);
 });
 
@@ -51,5 +52,3 @@ const starter = () => {
 };
 
 starter();
-
-
