@@ -28,6 +28,20 @@ main {
     text-align: center;
 }
 
+#board {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    grid-gap: 0;
+    margin: auto;
+    justify-content: stretch;
+    border: 1px solid black;
+}
+
+.grid-item {
+    border: 1px solid gray;
+}
+
 button {
     background-color: rgb(92, 125, 130);
     color: #fff;
@@ -39,7 +53,7 @@ button {
 
 footer {
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background-color: rgb(72, 102, 112);
     color: #fff;
