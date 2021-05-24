@@ -17,7 +17,6 @@ const createGrid = (cols, rows) => {
     gridElements = document.querySelectorAll(".grid-item");
     gridElements.forEach((item) => {
         item.addEventListener("mouseover", (ev) => {
-            item.classList.add("current");
             changeColor(ev);
         });
     });
@@ -34,16 +33,13 @@ const changeColor = (ev) => {
 const reset = () => {
     resetBoard.addEventListener("click", (ev) => {
         gridElements.forEach((item) => {
-            item.classList.remove("current");
+            item.style = null;
         });
     });
 }
 
 
 changeBoard.addEventListener("click", (ev) => {
-    gridElements.forEach((item) => {
-        item.classList.remove("current");
-    });
     cols = prompt("How many cols?");
     rows = prompt("How many rows?");
     createGrid(cols, rows);
